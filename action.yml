@@ -3,7 +3,7 @@ description: "A simple GitHub action that enables running post-run tasks, once a
 
 inputs:
   command:
-    description: "A commands that needs to be run."
+    description: "A command that needs to be run."
     required: true
     default: echo "This is a post-action command..."
 

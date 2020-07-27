@@ -1,12 +1,12 @@
-# Hello world javascript action
+# Post-Run GitHub action
 
-A simple GitHub action that enables running post-run tasks, once a workflow job has ended.
+A simple GitHub action that enables running post-run steps, once a workflow job has ended.
 
 ## Inputs
 
 ### `command`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** A command that needs to be run.. Default `echo "This is a post-run step..."`.
 
 ## Example usage
 
@@ -44,3 +44,5 @@ jobs:
 This above configuration will produce the following:
 
 ![image](./docs/results.png)
+
+Note: notice the order of execution.
