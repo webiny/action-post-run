@@ -6,7 +6,7 @@ A simple GitHub action that enables running post-run steps, once a workflow job 
 
 ### `command`
 
-**Required** A command that needs to be run.. Default `echo "This is a post-run step..."`.
+**Required** A command that needs to be run. Default `echo "This is a post-run step..."`.
 
 ## Example usage
 Latest version: `1.0.2`
