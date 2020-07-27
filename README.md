@@ -22,23 +22,23 @@ env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
 jobs:
-  build-test-release:
-    name: Conventional Commits
+  something:
+    name: Do something...
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
     
-      - uses: doitadrian/action-post@1.0.0
+      - uses: doitadrian/action-post-run@1.0.0
         id: post-run-command
         with:
           command: echo "this thing works!"
 
-      - uses: doitadrian/action-post@1.0.0
+      - uses: doitadrian/action-post-run@1.0.0
         id: another-post-run-command
         with:
           command: echo "this thing works again!"
 
-      - name: 'Running a unexisting command will fail...'
+      - name: 'Running an non-existing command will fail...'
         run: run something that does not exist;
 ```
 
