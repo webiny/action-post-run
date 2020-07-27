@@ -1,0 +1,13 @@
+name: "Action Post"
+description: "Enables executing custom commands once a workflow job has ended."
+
+inputs:
+  commands:
+    description: "Listof commands that need to be run."
+    required: true
+    default: []
+
+runs:
+  using: node12
+  main: dist/main/index.js
+  post: dist/post/index.js
