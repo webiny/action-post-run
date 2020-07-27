@@ -1316,11 +1316,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 (() => __awaiter(this, void 0, void 0, function* () {
     const core = __webpack_require__(470);
     const exec = __webpack_require__(986);
-    const commands = core.getInput('commands');
-    for (let i = 0; i < commands.length; i++) {
-        let command = commands[i];
-        yield exec.exec(command, []);
-    }
+    const command = core.getInput("command");
+    yield exec.exec(command, []);
 }))();
 
 

@@ -2,10 +2,10 @@ name: "Action Post"
 description: "Enables executing custom commands once a workflow job has ended."
 
 inputs:
-  commands:
-    description: "List of commands that need to be run."
+  command:
+    description: "A commands that needs to be run."
     required: true
-    default: []
+    default: echo "This is a post-action command..."
 
 runs:
   using: node12
