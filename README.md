@@ -46,4 +46,4 @@ This above configuration will produce the following:
 
 ![image](./docs/action-results.png)
 
-ℹ️Note the order of execution. The `command: echo "this thing works again!"` was executed before the `command: echo "this thing works!"` command.
+ℹ️ Note the order of execution. The `command: echo "this thing works again!"` was executed before the `command: echo "this thing works!"` command.
