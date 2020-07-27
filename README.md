@@ -44,6 +44,6 @@ jobs:
 
 This above configuration will produce the following:
 
-![image](./docs/results.png)
+![image](./docs/action-results.png)
 
-Note: notice the order of execution.
+ℹ️Note the order of execution. The `command: echo "this thing works again!"` was executed before the `command: echo "this thing works!"` command.
