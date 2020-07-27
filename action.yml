@@ -3,7 +3,7 @@ description: "Enables executing custom commands once a workflow job has ended."
 
 inputs:
   commands:
-    description: "Listof commands that need to be run."
+    description: "List of commands that need to be run."
     required: true
     default: []
 
