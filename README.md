@@ -1,21 +1,46 @@
 # Hello world javascript action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+A simple GitHub action that enables running post-run tasks, once a workflow job has ended.
 
 ## Inputs
 
-### `who-to-greet`
+### `command`
 
 **Required** The name of the person to greet. Default `"World"`.
 
-## Outputs
-
-### `time`
-
-The time we greeted you.
-
 ## Example usage
 
-uses: actions/hello-world-javascript-action@v1
-with:
-  who-to-greet: 'Mona the Octocat'
+```yaml
+name: Build
+
+on:
+  push:
+    branches: [ master ]
+
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+
+jobs:
+  build-test-release:
+    name: Conventional Commits
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+    
+      - uses: doitadrian/action-post@master
+        id: post-run-command
+        with:
+          command: echo "this thing works!"
+
+      - uses: doitadrian/action-post@master
+        id: another-post-run-command
+        with:
+          command: echo "this thing works again!"
+
+      - name: 'Running a unexisting command will fail...'
+        run: run something that does not exist;
+```
+
+This above configuration will produce the following:
+
+![image](./docs/results.png)

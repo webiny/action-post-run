@@ -1,5 +1,5 @@
-name: "Action Post"
-description: "Enables executing custom commands once a workflow job has ended."
+name: "Post-Run Action"
+description: "A simple GitHub action that enables running post-run tasks, once a workflow job has ended."
 
 inputs:
   command:
