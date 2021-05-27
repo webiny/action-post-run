@@ -3,5 +3,7 @@
     const exec = require("@actions/exec");
 
     const command = core.getInput("command");
-    await exec.exec(command, []);
+    const cwd = core.getInput("cwd");
+
+    await exec.exec(command, [], { cwd });
 })();

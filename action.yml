@@ -2,10 +2,14 @@ name: "Post-Run Action"
 description: "A simple GitHub action that enables running post-run tasks, once a workflow job has ended."
 
 inputs:
-  command:
+  run:
     description: "A command that needs to be run."
     required: true
     default: echo "This is a post-action command..."
+
+  working-directory:
+    description: "A working directory from which the command needs to be run."
+    required: false
 
 runs:
   using: node12
