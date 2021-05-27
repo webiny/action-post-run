@@ -9,7 +9,7 @@ A simple GitHub action that enables running post-run steps, once a workflow job 
 **Required** A command that needs to be run. Default `echo "This is a post-run step..."`.
 
 ## Example usage
-Latest version: `1.0.0`
+Latest version: `2.0.0`
 
 ```yaml
 name: Build
@@ -31,12 +31,13 @@ jobs:
       - uses: webiny/action-post-run@1.0.0
         id: post-run-command
         with:
-          command: echo "this thing works!"
+          run: echo "this thing works!"
 
       - uses: webiny/action-post-run@1.0.0
         id: another-post-run-command
         with:
           command: echo "this thing works again!"
+          working-directory: not-required-but-you-can-provide-it
 
       - name: 'Running an non-existing command will fail...'
         run: run something that does not exist;
