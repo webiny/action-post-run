@@ -1471,8 +1471,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 (() => __awaiter(this, void 0, void 0, function* () {
     const core = __webpack_require__(470);
     const exec = __webpack_require__(986);
-    const command = core.getInput("command");
-    const cwd = core.getInput("cwd");
+    const command = core.getInput("run");
+    const cwd = core.getInput("working-directory");
     yield exec.exec(command, [], { cwd });
 }))();
 

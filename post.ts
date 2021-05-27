@@ -2,8 +2,8 @@
     const core = require("@actions/core");
     const exec = require("@actions/exec");
 
-    const command = core.getInput("command");
-    const cwd = core.getInput("cwd");
+    const run = core.getInput("run");
+    const cwd = core.getInput("working-directory");
 
-    await exec.exec(command, [], { cwd });
+    await exec.exec(run, [], { cwd });
 })();
