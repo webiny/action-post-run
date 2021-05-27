@@ -28,12 +28,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
     
-      - uses: webiny/action-post-run@1.0.0
+      - uses: webiny/action-post-run@2.0.0
         id: post-run-command
         with:
           run: echo "this thing works!"
 
-      - uses: webiny/action-post-run@1.0.0
+      - uses: webiny/action-post-run@2.0.0
         id: another-post-run-command
         with:
           command: echo "this thing works again!"
