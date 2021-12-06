@@ -4,7 +4,7 @@ A simple GitHub action that enables running post-run steps, once a workflow job 
 
 ## Inputs
 
-### `command`
+### `run`
 
 **Required** A command that needs to be run. Default `echo "This is a post-run step..."`.
 
@@ -36,7 +36,7 @@ jobs:
       - uses: webiny/action-post-run@2.0.1
         id: another-post-run-command
         with:
-          command: echo "this thing works again!"
+          run: echo "this thing works again!"
           working-directory: not-required-but-you-can-provide-it
 
       - name: 'Running an non-existing command will fail...'
@@ -47,4 +47,4 @@ This above configuration will produce the following:
 
 ![image](./docs/action-results.png)
 
-ℹ️ Note the order of execution. The `command: echo "this thing works again!"` was executed before the `command: echo "this thing works!"` command.
+ℹ️ Note the order of execution. The `run: echo "this thing works again!"` was executed before the `run: echo "this thing works!"` command.
