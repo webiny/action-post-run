@@ -1751,7 +1751,14 @@ const tr = __importStar(__webpack_require__(9));
  */
 function exec(commandLine, args, options) {
     return __awaiter(this, void 0, void 0, function* () {
-        const runner = new tr.ToolRunner("bash", ["-euo", "pipefail", "-c", commandLine], options);
+        const runner = new tr.ToolRunner(
+            "bash",
+            [ "--noprofile",
+              "-euo", "pipefail",
+              "-c", commandLine
+            ],
+            options
+        );
         return runner.exec();
     });
 }
