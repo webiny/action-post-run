@@ -1754,7 +1754,8 @@ function exec(commandLine, args, options) {
         const runner = new tr.ToolRunner(
             "bash",
             [ "--noprofile",
-              "-e",
+              "--norc",
+              "-euo", "pipefail",
               "-c", commandLine
             ],
             options
