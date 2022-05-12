@@ -1751,14 +1751,7 @@ const tr = __importStar(__webpack_require__(9));
  */
 function exec(commandLine, args, options) {
     return __awaiter(this, void 0, void 0, function* () {
-        const commandArgs = tr.argStringToArray(commandLine);
-        if (commandArgs.length === 0) {
-            throw new Error(`Parameter 'commandLine' cannot be null or empty.`);
-        }
-        // Path to tool to execute should be first arg
-        const toolPath = commandArgs[0];
-        args = commandArgs.slice(1).concat(args || []);
-        const runner = new tr.ToolRunner(toolPath, args, options);
+        const runner = new tr.ToolRunner("bash", ["-euo", "pipefail", "-c", commandLine], options);
         return runner.exec();
     });
 }
