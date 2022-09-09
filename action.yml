@@ -10,8 +10,14 @@ inputs:
   working-directory:
     description: "A working directory from which the command needs to be run."
     required: false
+    
+  skip-on-failure:
+    description: "Set to true to not run the command if the job fails."
+    required: false
+    default: false
 
 runs:
   using: node12
   main: dist/main/index.js
   post: dist/post/index.js
+  post-if: '!inputs.skip-on-failure || success()'
