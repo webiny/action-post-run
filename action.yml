@@ -20,4 +20,4 @@ runs:
   using: node12
   main: dist/main/index.js
   post: dist/post/index.js
-  post-if: ${{ inputs.skip-on-failure != 'true' || success() }}
+  post-if: ${{ env.INPUT_SKIP-ON-FAILURE != 'true' || success() }}
