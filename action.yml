@@ -7,6 +7,10 @@ inputs:
     required: true
     default: echo "This is a post-action command..."
 
+  shell:
+    description: TODO
+    required: false
+
   working-directory:
     description: "A working directory from which the command needs to be run."
     required: false
