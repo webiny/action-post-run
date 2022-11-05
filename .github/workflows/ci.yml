@@ -1,0 +1,23 @@
+name: CI
+on:
+  - push
+  - pull_request
+
+jobs:
+  # This is a trivial smoke test.
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - run: echo "Let's begin!"
+
+      - name: Define first post action
+        uses: ./
+        with:
+          run: echo "The first post action"
+
+      - name: Define second post action
+        uses: ./
+        with:
+          run: echo "The second post action"
